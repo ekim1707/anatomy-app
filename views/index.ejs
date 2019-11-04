@@ -1,0 +1,184 @@
+<% include head %>
+  <body>
+    <button class="button-materialize-style hoverable">
+      <span class="button-white-dot"></span>
+    </button>
+    <% include navbar %>
+    <div class="background-image-floating"></div>
+    <div class="flex-container">
+      <h1>Welcome to Anatomy</h1>
+      <div class="body-divs first-div">
+        <h2>Basic Review</h2>
+        <div class="basic-review-nav">
+          <div class="basic-review-nav-cols">
+            <li class="review-topic-lis">
+              Micro vs Macrobiology
+            </li>
+            <li class="review-topic-lis">
+              Homeostasis and Mutual Dependency
+            </li>
+            <li class="review-topic-lis">
+              Blood and Circulation
+            </li>
+            <li class="review-topic-lis">
+              The Four Types of Tissues
+            </li>
+            <li class="review-topic-lis">
+              Important Organs
+            </li>
+            <li class="review-topic-lis">
+              The Skeleton; Bones
+            </li>
+          </div>
+          <div class="basic-review-nav-cols">
+            <li class="review-topic-lis">
+              Neural Anatomy
+            </li>
+            <li class="review-topic-lis">
+              The Nervous System; Sensation
+            </li>
+            <li class="review-topic-lis">
+              Innate Self-Defense Mechanisms
+            </li>
+            <li class="review-topic-lis">
+              The Digestive System
+            </li>
+            <li class="review-topic-lis">
+              The Urinary System
+            </li>
+            <li class="review-topic-lis">
+              The Reproductive System
+            </li>
+          </div>
+          <div class="basic-review-nav-cols">
+            <li class="review-topic-lis">
+              The Immune System: Leukocytes
+            </li>
+            <li class="review-topic-lis">
+              Lymphatic System
+            </li>
+            <li class="review-topic-lis">
+              Viruses, Self-Replication, and Resistance
+            </li>
+            <li class="review-topic-lis">
+              Adaptation and Mutation
+            </li>
+            <li class="review-topic-lis">
+              A Brief Look Back at DNA
+            </li>
+            <li class="review-topic-lis">
+              Oncology, Uncontrolled Proliferation, Metastasis
+            </li>
+          </div>
+        </div>
+        <div class="review-topic-bodies">
+          Micro vs Macro
+        </div>
+        <div class="review-topic-bodies">
+          Homeostasis
+        </div>
+        <div class="review-topic-bodies">
+          Blood, Hematopoiesis, Circulation
+        </div>
+        <div class="review-topic-bodies">
+          The Four Types of Tissues, Tissue Levels, Tissue Groups
+        </div>
+        <div class="review-topic-bodies">
+          Organs, Organ Levels, Organ Systems
+        </div>
+        <div class="review-topic-bodies">
+          Bones and the Skeletal System
+        </div>
+        <div class="review-topic-bodies">
+          Neurobiology, Brain Anatomy
+        </div>
+        <div class="review-topic-bodies">
+          Neurons, Nerves, The Nervous System
+        </div>
+        <div class="review-topic-bodies">
+          Innate Defense: Built-in Body-guards
+        </div>
+        <div class="review-topic-bodies">
+          The Digestive System, The Digestive Tract, Digestion
+        </div>
+        <div class="review-topic-bodies">
+          The Urinary System, Excretion
+        </div>
+        <div class="review-topic-bodies">
+          The Reproductive System
+        </div>
+        <div class="review-topic-bodies">
+          The Immune System: Leukocytes and Other Self-Defense Microbes
+        </div>
+        <div class="review-topic-bodies">
+          The Lymphatic System (briefly)
+        </div>
+        <div class="review-topic-bodies">
+          Viruses, Self-Proliferation, And Resistance
+        </div>
+        <div class="review-topic-bodies">
+          Adaptation and Mutation
+        </div>
+        <div class="review-topic-bodies">
+          DNA Revisited (briefly)
+        </div>
+        <div class="review-topic-bodies">
+          Oncology
+        </div>
+      </div>
+      <div class="body-divs second-div hidden">
+        <h2>Media</h2>
+      </div>
+      <div class="body-divs third-div hidden">
+        <h2>Study Tools</h2>
+      </div>
+    </div>
+  <script>
+    $(".button-materialize-style, .navbar").mouseover(() => {
+      $(".navlinks").css("left", "0");
+    })
+    $(window).click((e) => {
+      const el = e.target;
+      if (!$(el).attr('class').includes("navlinks")) {
+        if (!$(".navlinks").css("left", "-10%")) {
+          $(".navlinks").css("left", "-10%");
+        }
+      }
+      if (el.id === "nav-first-link") {
+        if (!el.classList.contains("selected")) {
+          $(".navlinks-link").removeClass("selected");
+          $(el).addClass("selected");
+        }
+        $(".body-divs").removeClass("hidden");
+        $.each($(".body-divs"), function(i, div) {
+          if (!$(div).attr('class').includes("first-div")) {
+            $(div).addClass("hidden");
+          }
+        });
+      } else if (el.id === "nav-second-link") {
+        if (!el.classList.contains("selected")) {
+          $(".navlinks-link").removeClass("selected");
+          $(el).addClass("selected");
+        }
+        $(".body-divs").removeClass("hidden");
+        $.each($(".body-divs"), function(i, div) {
+          if (!$(div).attr('class').includes("second-div")) {
+            $(div).addClass("hidden");
+          }
+        });
+      } else if (el.id === "nav-third-link") {
+        if (!el.classList.contains("selected")) {
+          $(".navlinks-link").removeClass("selected");
+          $(el).addClass("selected");
+        }
+        $(".body-divs").removeClass("hidden");
+        $.each($(".body-divs"), function(i, div) {
+          if (!$(div).attr('class').includes("third-div")) {
+            $(div).addClass("hidden");
+          }
+        });
+      }
+    })
+  </script>
+  </body>
+</html>

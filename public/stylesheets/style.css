@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.button-materialize-style {
+  display: inline-block;
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  left: 15px;
+  top: 15px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: #ff9800;
+  overflow: hidden;
+  z-index: 2;
+}
+.button-white-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+}
+.button-materialize-style:hover {
+  cursor: pointer;
+}
+.navbar {
+  display: block;
+  position: fixed;
+  width: 3%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+}
+.navlinks {
+  position: fixed;
+  width: 10%;
+  height: 50%;
+  left: -10%;
+  top: 25%;
+  margin: 0;
+  padding: 0;
+  border: 4px solid gray;
+  border-left: none;
+  background: whitesmoke;
+  list-style: none;
+  transition: left 1s;
+}
+.navlinks-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  color: gray;
+  border-bottom: 4px solid gray;
+}
+.navlinks-link:hover {
+  cursor: pointer;
+}
+.background-image-floating {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  background: url('../images/anatomybackground.png');
+  background-position-x: right;
+  background-position-y: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -5;
+}
+
+.flex-container {
+  width: 100%;
+  height: 300vh;
+  padding: 20px;
+  background: transparent;
+  text-align: center;
+}
+.body-divs {
+  width: 100%;
+  height: 100%;
+}
+.basic-review-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 10%;
+  margin: 10px 0 10px 0;
+  border: 8px solid #ff9800;
+  background: rgb(255, 255, 255, .5);
+}
+.basic-review-nav-cols {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 33.33%;
+  height: 100%;
+}
+.review-topic-lis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 16.67%;
+  font-weight: bolder;
+  transition: .7s;
+}
+.review-topic-lis:hover {
+  cursor: pointer;
+  color: #ff9800;
+  transition: .7s;
+}
+.review-topic-bodies {
+  width: 100%;
+  height: 10%;
+  text-align: left;
+}
+
+
+.selected {
+  background: #ff9800;
+  color: white;
+}
+.hidden {
+  display: none;
+}
+
+.hoverable {
+  -webkit-transition: -webkit-box-shadow .5s;
+  transition: -webkit-box-shadow .5s;
+  transition: box-shadow .5s;
+  transition: box-shadow .5s, -webkit-box-shadow .5s;
+}
+.hoverable:hover {
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
