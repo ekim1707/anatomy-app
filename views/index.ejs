@@ -30,7 +30,15 @@
     $(window).click((e) => {
       const el = e.target;
       if ($(el).attr('class')) {
-        if (!$(el).attr('class').includes("navlinks") && !$(el).attr('class').includes("review-topic-lis")) {
+        const classNames = [
+          "navlinks", 
+          "navlinks-link", 
+          "review-topic-lis", 
+          "review-topic-lis selected-text",
+          "fullscreen-toggles", 
+          "iframe-toggles"
+        ];
+        if (!classNames.includes($(el).attr('class'))) {
           if (!$(".navlinks").css("left", "-10%")) {
             $(".navlinks").css("left", "-10%");
           }
@@ -106,7 +114,7 @@
         $('#maximize').addClass('hidden');
         $('#minimize').removeClass('hidden');
       } else if (el.id === "minimize") {
-        $('.media-player').width('80%').height('80%').css({'left': '10%', 'top': 'initial'});
+        $('.media-player').width('78%').height('78%').css({'left': '11%', 'top': 'initial'});
         $('.iframe-toggles').css({'top': '-60px', 'left': '11%', 'width': '50px', 'height': '50px', 'padding': '10px'});
         $('#media-videos').css('margin-left', '60px');
         $('#media-images').css('margin-left', '120px');

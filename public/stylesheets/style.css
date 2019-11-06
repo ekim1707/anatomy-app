@@ -48,7 +48,7 @@ body {
   top: 30%;
   margin: 0;
   padding: 0;
-  border: 4px solid gray;
+  border: 4px solid black;
   border-left: none;
   background: whitesmoke;
   list-style: none;
@@ -62,7 +62,7 @@ body {
   width: 100%;
   height: 25%;
   color: gray;
-  border-bottom: 4px solid gray;
+  border-bottom: 4px solid black;
 }
 #nav-fourth-link {
   border-bottom: none;
@@ -175,9 +175,9 @@ body {
 .media-player {
   display: flex;
   position: absolute;
-  width: 80%;
-  height: 80%;
-  left: 10%;
+  width: 78%;
+  height: 78%;
+  left: 11%;
   border: 2px solid black;
   background: white;
 }
@@ -218,9 +218,24 @@ body {
   height: 100%;
   background: whitesmoke;
 }
+.col-headings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  background: gray;
+  color: white;
+}
+.col-lists {
+  width: 100%;
+  height: 80%;
+}
+
 .media-player-iframe {
-  width: 80%;
-  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* extras */
