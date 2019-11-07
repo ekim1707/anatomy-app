@@ -11,23 +11,19 @@ const imageLis = data.imageData.map(image => [{name: image.name, resource: image
 const imageURLs = data.imageData.map(image => image.url);
 const savedImages = data.imageData.filter(image => image.saved);
 
-const testLis = [{name: 'test', resource: 'test', date: 'test'}];
-const testURLs = 'none';
-const savedTests = '';
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log(articleLis);
   res.render('index', { 
-    testLis: testLis,
-    testURLs: testURLs,
-    savedTests: savedTests,
-    // videoLis: testLis,
-    // videoURLs: testURLs,
-    // savedVideos: savedTests,
-    // imageLis: testLis,
-    // imageURLs: testURLs,
-    // savedImages: savedTests
+    data: data
+    // articleLis: articleLis,
+    // articleURLs: articleURLs,
+    // savedArticles: savedArticles,
+    // videoLis: videoLis,
+    // videoURLs: videoURLs,
+    // savedVideos: savedVideos,
+    // imageLis: imageLis,
+    // imageURLs: imageURLs,
+    // savedImages: savedImages
   });
 });
 
