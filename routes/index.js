@@ -28,4 +28,10 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/test', (req, res) => {
+  res.render('basics', {
+    title: 'listening'
+  });
+});
+
 module.exports = router;
