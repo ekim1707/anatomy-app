@@ -15,7 +15,7 @@ const savedImages = data.imageData.filter(image => image.saved);
 router.get('/', function(req, res, next) {
   res.render('index', { 
     title: 'Express',
-    articleLis: articleLis,
+    articleLis: ['test'],
     articleURLs: articleURLs,
     savedArticles: savedArticles,
     videoLis: videoLis,
