@@ -19,15 +19,15 @@ const savedTests = '';
 router.get('/', function(req, res, next) {
   console.log(articleLis);
   res.render('index', { 
-    articleLis: testLis,
-    articleURLs: testURLs,
-    savedArticles: savedTests,
-    videoLis: testLis,
-    videoURLs: testURLs,
-    savedVideos: savedTests,
-    imageLis: testLis,
-    imageURLs: testURLs,
-    savedImages: savedTests
+    testLis: testLis,
+    testURLs: testURLs,
+    savedTests: savedTests,
+    // videoLis: testLis,
+    // videoURLs: testURLs,
+    // savedVideos: savedTests,
+    // imageLis: testLis,
+    // imageURLs: testURLs,
+    // savedImages: savedTests
   });
 });
 
