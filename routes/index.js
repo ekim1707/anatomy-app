@@ -11,8 +11,11 @@ const imageLis = data.imageData.map(image => [{name: image.name, resource: image
 const imageURLs = data.imageData.map(image => image.url);
 const savedImages = data.imageData.filter(image => image.saved);
 
+console.log(articleLis);
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  console.log(articleLis);
   res.render('index', { 
     title: 'Express',
     articleLis: articleLis,
