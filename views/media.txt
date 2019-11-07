@@ -1,4 +1,4 @@
-<!-- <div class="body-divs second-div hidden">
+<div class="body-divs second-div hidden">
     <h2>Media Player</h2>
     <div class="media-player">
         <img class="fullscreen-toggles" src="../images/fullscreen.png" width="25px" height="25px" alt="" id="maximize">
@@ -78,4 +78,4 @@
             </ul>
         </div>
     </div>
-</div> -->
+</div>
