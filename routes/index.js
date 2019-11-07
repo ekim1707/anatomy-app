@@ -11,6 +11,8 @@ const imageLis = data.imageData.map(image => [{name: image.name, resource: image
 const imageURLs = data.imageData.map(image => image.url);
 const savedImages = data.imageData.filter(image => image.saved);
 
+console.log('sanity check');
+console.log(data);
 console.log(articleLis);
 
 /* GET home page. */
