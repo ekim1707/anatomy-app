@@ -17,7 +17,6 @@ console.log(articleLis);
 router.get('/', function(req, res, next) {
   console.log(articleLis);
   res.render('index', { 
-    title: 'Express',
     articleLis: articleLis,
     articleURLs: articleURLs,
     savedArticles: savedArticles,

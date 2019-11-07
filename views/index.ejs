@@ -8,11 +8,12 @@
     <div class="flex-container">
       <h1>Welcome to Anatomy</h1>
       <% include basics %>
-      <%= title %>
+      
       <% include studytools %>
       <% include notetaking %>
     </div>
   <script>
+    console.log('sanity check');
     $(".button-materialize-style, .navbar").mouseover(() => {
       $(".navlinks").css("left", "0");
     })
