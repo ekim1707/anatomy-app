@@ -4,17 +4,71 @@
         <img class="fullscreen-toggles" src="../images/fullscreen.png" width="25px" height="25px" alt="" id="maximize">
         <img class="fullscreen-toggles hidden" src="../images/minimize.png" width="25px" height="25px" alt="" id="minimize">
         <img class="iframe-toggles selected" src="../images/articles.png" alt="" id="media-articles">
-        <img class="iframe-toggles" src="../images/videos.png" alt="" id="media-videos">
-        <img class="iframe-toggles" src="../images/camera.png" alt="" id="media-images">
+        <img class="iframe-toggles media-videos" src="../images/videos.png" alt="" id="media-videos">
+        <img class="iframe-toggles media-images" src="../images/camera.png" alt="" id="media-images">
         <div class="media-player-col">
             <div class="col-headings">
                 NEW
             </div>
-            <ul class="col-lists">
-
+            <ul class="col-lists" id="media-articles">
+                <% articleLis.forEach((article, i) => { %>
+                    <% if (i === 0) { %>
+                        <li class="col-lis article-lis selected" id="article-<%= i %>">
+                            <div class="col-lis-name"><%= article[0].name %></div>
+                            <div class="col-lis-info"><%= article[0].resource %>, <%= article[0].date %></div>
+                        </li>
+                    <% } else { %>
+                        <li class="col-lis article-lis" id="article-<%= i %>">
+                            <div class="col-lis-name"><%= article[0].name %></div>
+                            <div class="col-lis-info"><%= article[0].resource %>, <%= article[0].date %></div>
+                        </li>
+                    <% } %>
+                <% }) %>
+            </ul>
+            <ul class="col-lists hidden" id="media-videos">
+                <% videoLis.forEach((video, i) => { %>
+                    <% if (i === 0) { %>
+                        <li class="col-lis video-lis selected" id="video-<%= i %>">
+                            <div class="col-lis-name"><%= video[0].name %></div>
+                            <div class="col-lis-info"><%= video[0].resource %>, <%= video[0].date %></div>
+                        </li>
+                    <% } else { %>
+                        <li class="col-lis video-lis" id="video-<%= i %>">
+                            <div class="col-lis-name"><%= video[0].name %></div>
+                            <div class="col-lis-info"><%= video[0].resource %>, <%= video[0].date %></div>
+                        </li>
+                    <% } %>
+                <% }) %>
+            </ul>
+            <ul class="col-lists hidden" id="media-images">
+                <% imageLis.forEach((image, i) => { %>
+                    <% if (i === 0) { %>
+                        <li class="col-lis image-lis selected" id="image-<%= i %>">
+                            <div class="col-lis-name"><%= image[0].name %></div>
+                            <div class="col-lis-info"><%= image[0].resource %></div>
+                        </li>
+                    <% } else { %>
+                        <li class="col-lis image-lis" id="image-<%= i %>">
+                            <div class="col-lis-name"><%= image[0].name %></div>
+                            <div class="col-lis-info"><%= image[0].resource %></div>
+                        </li>
+                    <% } %>
+                <% }) %>
             </ul>
         </div>
-        <iframe class="media-player-iframe" src="../images/nature.pdf" width="80%" height="100%" scrolling="auto" frameBorder="0"></iframe>
+        <% articleURLs.forEach((url, i) => { %>
+            <% if (i === 0) { %>
+                <iframe class="media-player-iframe" src="../images/<%= url %>" scrolling="auto" frameBorder="0" id="article-<%= i %>"></iframe>
+            <% } else { %>
+                <iframe class="media-player-iframe hidden" src="../images/<%= url %>" scrolling="auto" frameBorder="0" id="article-<%= i %>"></iframe>
+            <% } %>
+        <% }) %>
+        <% videoURLs.forEach((url, i) => { %>
+            <iframe class="media-player-iframe hidden" src="<%= url %>" scrolling="auto" frameBorder="0" id="video-<%= i %>"></iframe>
+        <% }) %>
+        <% imageURLs.forEach((url, i) => { %>
+            <img class="media-player-iframe hidden" src="../images/<%= url %>" scrolling="auto" frameBorder="0" id="image-<%= i %>"></img>
+        <% }) %>
         <div class="media-player-col">
             <div class="col-headings">
                 SAVED
