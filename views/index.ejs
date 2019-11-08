@@ -8,7 +8,9 @@
     <div class="flex-container">
       <h1>Welcome to Anatomy</h1>
       <% include basics %>
-      <% include media %>
+      <div class="body-divs second-div hidden">
+        Coming soon
+      </div>
       <% include studytools %>
       <% include notetaking %>
     </div>
@@ -32,11 +34,7 @@
       if ($(el).attr('class')) {
         const classNames = [
           "navlinks", 
-          "navlinks-link", 
-          "review-topic-lis", 
-          "review-topic-lis selected-text",
-          "fullscreen-toggles", 
-          "iframe-toggles"
+          "navlinks-link"
         ];
         if (!classNames.includes($(el).attr('class'))) {
           if (!$(".navlinks").css("left", "-10%")) {
@@ -108,9 +106,10 @@
 
       if (el.id === "maximize") {
         $('.media-player').width('100%').height('100%').css({'left': '0', 'top': '0'});
-        $('.iframe-toggles').css({'top': '10px', 'left': '8%', 'width': '25px', 'height': '25px', 'padding': '2px'});
-        $('.media-videos').css({'top': '40px', 'margin-left': '0'});
-        $('.media-images').css({'top': '70px', 'margin-left': '0'});
+        $('.iframe-toggles').css({'top': '5px', 'left': '8%', 'width': '25px', 'height': '25px', 'padding': '2px'});
+        $('.media-videos').css({'top': '35px', 'margin-left': '0'});
+        $('.media-images').css({'top': '65px', 'margin-left': '0'});
+        $('.col-lis-name, .col-lis-info').css('padding', '10px');
         $('#maximize').addClass('hidden');
         $('#minimize').removeClass('hidden');
         if (!$('.button-materialize-style').attr('class').includes('hidden')) {
@@ -121,6 +120,8 @@
         $('.iframe-toggles').css({'top': '-60px', 'left': '11%', 'width': '50px', 'height': '50px', 'padding': '10px'});
         $('.media-videos').css('margin-left', '60px');
         $('.media-images').css('margin-left', '120px');
+        $('.col-lis-name').css('padding', '5px');
+        $('.col-lis-info').css('padding', '2px');
         $('#maximize').removeClass('hidden');
         $('#minimize').addClass('hidden');
         $('.button-materialize-style').removeClass('hidden');
@@ -151,7 +152,7 @@
           } else if (el.parentNode.classList.contains('video-lis')) {
             $('.video-lis').removeClass('selected');
             $(el).parent().addClass('selected');
-          } else if (el.parentNode.classList.contains('images-lis')) {
+          } else if (el.parentNode.classList.contains('image-lis')) {
             $('.image-lis').removeClass('selected');
             $(el).parent().addClass('selected');
           }
@@ -163,7 +164,18 @@
           });
         }
       }
-    })
+
+      [
+        'flash-card', 
+        'flash-card-front', 
+        'flash-card-back', 
+        'flash-card-category', 
+        'flash-card-question',
+        'flash-card-answer',
+        'flash-card-hint',
+        'flash-card-answer-explanation'
+      ].includes($(el).attr('class')) ? $('.flash-card').toggleClass('flip') : '';
+    });
   </script>
   </body>
 </html>

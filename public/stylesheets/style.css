@@ -81,7 +81,7 @@ body {
   background-position-y: 100px;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: -5;
 }
 
@@ -178,7 +178,6 @@ body {
   width: 78%;
   height: 78%;
   left: 11%;
-  border: 2px solid black;
   background: white;
 }
 .fullscreen-toggles {
@@ -221,6 +220,7 @@ body {
   width: 10%;
   height: 100%;
   background: whitesmoke;
+  border: 2px solid black;
 }
 .col-headings {
   display: flex;
@@ -245,9 +245,9 @@ body {
   justify-content: stretch;
   align-items: stretch;
   width: 100%;
-  height: 30%;
+  height: 43%;
   overflow: auto;
-  border-bottom: 2px solid black;
+  border-top: 2px solid black;
 }
 .col-lis:hover {
   cursor: pointer;
@@ -261,6 +261,7 @@ body {
   align-items: center;
   font-weight: bolder;
   padding: 5px;
+  overflow: hidden;
 }
 .col-lis-info {
   flex-grow: 1;
@@ -275,9 +276,142 @@ body {
   width: 81%;
   height: 100%;
   text-align: center;
+  background: lightgray;
   border: 2px solid black;
-  border-top: none;
-  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  object-fit: contain;
+}
+
+/* study tools section starts here */
+
+.flash-card-center {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 80vh;
+  border: 5px solid #ff9800;
+}
+.flash-card-practice-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  border-right: 2.5px solid #ff9800;
+  background: rgb(211, 211, 211, 0.5);
+  perspective: 1000;
+}
+.practice-container-categories {
+  display: flex;
+  position: absolute;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  top: 0;
+}
+.practice-container-category-label {
+  list-style: none;
+  padding: 5px 0 5px 5px;
+}
+.practice-container-category-lis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  list-style: none;
+  margin: 5px;
+  padding: 5px;
+  background: white;
+  border-radius: 50%;
+}
+.practice-container-category-lis.selected {
+  background: #ff9800;
+  color: white;
+}
+.practice-container-category-lis:hover {
+  cursor: pointer;
+}
+.flash-card {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  transform-style: preserve-3d;
+  border: 1px solid black;
+  background: transparent;
+  transition: 1s;
+}
+.flash-card:hover {
+  cursor: pointer;
+}
+.flash-card-back, .flash-card-front {
+  display: flex;
+  position: absolute;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  backface-visibility: hidden;
+}
+.flash-card-back {
+  transform: rotateY(180deg);
+}
+.flash-card-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  padding: 5px;
+}
+.flash-card-answer, .flash-card-question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  padding: 5px;
+  font-size: 1.5em;
+}
+.flash-card-answer, .flash-card-answer-explanation {
+  color: red;
+}
+.flash-card-answer-explanation, .flash-card-hint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  padding: 5px;
+}
+.flash-card-maker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  border-left: 2.5px solid #ff9800;
+  background: rgb(255, 255, 255, .5);
+}
+.flash-card-maker-form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+  height: 70%;
+  border: 1px solid black;
+  background: white;
+}
+.form-row {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 /* extras */
@@ -305,6 +439,9 @@ body {
   display: none;
 }
 
+.flip {
+  transform: rotateY(-180deg);
+}
 .hoverable {
   -webkit-transition: -webkit-box-shadow .5s;
   transition: -webkit-box-shadow .5s;

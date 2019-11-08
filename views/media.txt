@@ -13,7 +13,7 @@
             <ul class="col-lists" id="media-articles">
                 <% articleLis.forEach((article, i) => { %>
                     <% if (i === 0) { %>
-                        <li class="col-lis article-lis selected" id="article-<%= i %>">
+                        <li class="col-lis article-lis selected" style="border-top: none;" id="article-<%= i %>">
                             <div class="col-lis-name"><%= article[0].name %></div>
                             <div class="col-lis-info"><%= article[0].resource %>, <%= article[0].date %></div>
                         </li>
@@ -28,7 +28,7 @@
             <ul class="col-lists hidden" id="media-videos">
                 <% videoLis.forEach((video, i) => { %>
                     <% if (i === 0) { %>
-                        <li class="col-lis video-lis selected" id="video-<%= i %>">
+                        <li class="col-lis video-lis selected" style="border-top: none;" id="video-<%= i %>">
                             <div class="col-lis-name"><%= video[0].name %></div>
                             <div class="col-lis-info"><%= video[0].resource %>, <%= video[0].date %></div>
                         </li>
@@ -43,7 +43,7 @@
             <ul class="col-lists hidden" id="media-images">
                 <% imageLis.forEach((image, i) => { %>
                     <% if (i === 0) { %>
-                        <li class="col-lis image-lis selected" id="image-<%= i %>">
+                        <li class="col-lis image-lis selected" style="border-top: none;" id="image-<%= i %>">
                             <div class="col-lis-name"><%= image[0].name %></div>
                             <div class="col-lis-info"><%= image[0].resource %></div>
                         </li>
