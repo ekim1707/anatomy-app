@@ -191,6 +191,20 @@
         $('.flash-card-practice-container').width('70%');
       }
 
+      if (el.classList.contains('flash-card-practice-container-fullscreen')) {
+        $('.flash-card-practice-container-fullscreen, .flash-card-practice-container-minimize, .button-materialize-style').toggleClass('hidden');
+        $('.flash-card-practice-container').css('background', 'rgb(211, 211, 211, 1)');
+        $('.flash-card-maker-container').css('background', 'rgb(255, 255, 255, 1)');
+        $('.third-div').children().hide();
+        $('.flash-card-center').show().css({'position': 'absolute', 'top': '0'}).height('100%');
+      } else if (el.classList.contains('flash-card-practice-container-minimize')) {
+        $('.flash-card-practice-container-fullscreen, .flash-card-practice-container-minimize, .button-materialize-style').toggleClass('hidden');
+        $('.flash-card-center').css({'position': 'static', 'top': 'initial'}).height('80vh');
+        $('.flash-card-practice-container').css('background', 'rgb(211, 211, 211, .5)');
+        $('.flash-card-maker-container').css('background', 'rgb(255, 255, 255, .5)');
+        $('.third-div').children().show();
+      }
+
     });
 
   </script>
