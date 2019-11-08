@@ -7,10 +7,10 @@
                 <li class="practice-container-category-label">
                     Topics:
                 </li>
-                <li class="practice-container-category-lis selected">
+                <li class="practice-container-category-lis">
                     I
                 </li>
-                <li class="practice-container-category-lis">
+                <li class="practice-container-category-lis selected">
                     II
                 </li>
                 <li class="practice-container-category-lis">
@@ -61,14 +61,19 @@
                 <li class="practice-container-category-lis">
                     XVIII
                 </li>
-                <li class="practice-container-category-lis">
-                    *
-                </li>
+                <img class="practice-container-category-lis" src="../images/all.png"></img>
             </div>
+            <img src="../images/minimizeright.png" alt="" class="flash-card-maker-minimize hoverable">
+            <img src="../images/expandleft.png" alt="" class="flash-card-maker-maximize hoverable hidden">
             <div class="flash-card hoverable">
                 <div class="flash-card-back">
-                    <div class="flash-card-category">
-                        Homeostasis
+                    <div class="flash-card-header">
+                        <span class="flash-card-topic">
+                            Topic II:&nbsp;
+                        </span>
+                        <span class="flash-card-category">
+                            Homeostasis
+                        </span>
                     </div>
                     <div class="flash-card-answer">
                         (A) towards the control center
@@ -78,8 +83,13 @@
                     </div>
                 </div>
                 <div class="flash-card-front">
-                    <div class="flash-card-category">
-                        Homeostasis
+                    <div class="flash-card-header">
+                        <span class="flash-card-topic">
+                            Topic II:&nbsp;
+                        </span>
+                        <span class="flash-card-category">
+                            Homeostasis
+                        </span>
                     </div>
                     <div class="flash-card-question">
                         An afferent pathway goes: (A) towards the control center (B) away from the control center
@@ -99,6 +109,7 @@
         <div class="flash-card-maker-container">
             <form action="post" class="flash-card-maker-form">
                 <label for="">Card Maker</label>
+                Note: If no topic is specified, the created note-card will be placed under the "all" topic.
                 <div class="form-row">
                     <input type="text" placeholder="Topic">
                     <input type="text" placeholder="Category">

@@ -175,7 +175,24 @@
         'flash-card-hint',
         'flash-card-answer-explanation'
       ].includes($(el).attr('class')) ? $('.flash-card').toggleClass('flip') : '';
+
+      if (el.classList.contains('practice-container-category-lis')) {
+        $('.practice-container-category-lis').removeClass('selected');
+        $(el).addClass('selected');
+      }
+
+      if (el.classList.contains('flash-card-maker-minimize')) {
+        $('.flash-card-maker-minimize, .flash-card-maker-maximize').toggleClass('hidden');
+        $('.flash-card-maker-container').toggleClass('hidden');
+        $('.flash-card-practice-container').width('100%');
+      } else if (el.classList.contains('flash-card-maker-maximize')) {
+        $('.flash-card-maker-minimize, .flash-card-maker-maximize').toggleClass('hidden');
+        $('.flash-card-maker-container').toggleClass('hidden');
+        $('.flash-card-practice-container').width('70%');
+      }
+
     });
+
   </script>
   </body>
 </html>

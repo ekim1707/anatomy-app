@@ -299,9 +299,7 @@ body {
   align-items: center;
   width: 70%;
   height: 100%;
-  border-right: 2.5px solid #ff9800;
   background: rgb(211, 211, 211, 0.5);
-  perspective: 1000;
 }
 .practice-container-categories {
   display: flex;
@@ -336,6 +334,17 @@ body {
 .practice-container-category-lis:hover {
   cursor: pointer;
 }
+.flash-card-maker-minimize, .flash-card-maker-maximize {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 10px;
+  top: 10%;
+  border-radius: 50%;
+}
+.flash-card-maker-minimize:hover, .flash-card-maker-maximize:hover {
+  cursor: pointer;
+}
 .flash-card {
   position: relative;
   width: 80%;
@@ -364,7 +373,7 @@ body {
 .flash-card-back {
   transform: rotateY(180deg);
 }
-.flash-card-category {
+.flash-card-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -392,11 +401,12 @@ body {
 }
 .flash-card-maker-container {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 30%;
   height: 100%;
-  border-left: 2.5px solid #ff9800;
+  border-left: 5px solid #ff9800;
   background: rgb(255, 255, 255, .5);
 }
 .flash-card-maker-form {
