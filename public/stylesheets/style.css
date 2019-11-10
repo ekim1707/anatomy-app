@@ -558,10 +558,10 @@ body {
   transition: 1s;
 }
 @keyframes glowing {
-  0% { box-shadow: 0 0 -20px rgb(240, 93, 93); }
-  40% { box-shadow: 0 0 40px rgb(240, 93, 93); }
-  60% { box-shadow: 0 0 40px rgb(240, 93, 93); }
-  100% { box-shadow: 0 0 -20px rgb(240, 93, 93); }
+  0% { box-shadow: 0 0 -15px rgb(240, 93, 93); }
+  40% { box-shadow: 0 0 30px rgb(240, 93, 93); }
+  60% { box-shadow: 0 0 30px rgb(240, 93, 93); }
+  100% { box-shadow: 0 0 -15px rgb(240, 93, 93); }
 }
 
 /* extras */
