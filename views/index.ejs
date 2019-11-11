@@ -8,16 +8,17 @@
     <div class="flex-container">
       <h1>Welcome to Anatomy</h1>
       <% include basics %>
-      <div class="body-divs second-div hidden">
+      <!-- <div class="body-divs second-div hidden">
         Coming soon
-      </div>
+      </div> -->
+      <% include media %>
       <% include studytools %>
       <% include notetaking %>
     </div>
   <script>
     $(".button-materialize-style, .navbar").mouseover(() => {
       $(".navlinks").css("left", "0");
-    })
+    });
     window.onscroll = () => {
       stickyTopicsNav();
     }
@@ -220,6 +221,20 @@
           $('.explanations').css('transform', 'translateX(-66.66%)');
         }
       } else if (el.classList.contains('explanations-toggle-left')) {
+        if (!$('.traffic-light').hasClass('hidden')) {
+            $('.traffic-light').addClass('hidden');
+            $('.red-light').css({'background': 'red', 'color': 'white'})
+          setTimeout(() => {
+            $('.begin-button').css({
+              'margin': '30px',
+              'width': '30%', 
+              'height': '30%', 
+              'border': '5px solid black',
+              'border-radius': '25px',
+              'background': 'white'
+            }).html('BEGIN');
+          }, 1000);
+        }
         if ($('.explanations-toggle-right').hasClass('hidden')) {
           $('.explanations-toggle-right').toggleClass('hidden');
           $('.explanations').css('transform', 'translateX(-33.33%)');
@@ -238,6 +253,59 @@
         $('.game-center').css({'position': 'relative', 'top': 'initial', 'border': '5px solid black'}).width('79%').height('80vh');
         $('.third-div').children().show();
         window.scrollTo(0,document.body.scrollHeight);
+      }
+
+      if (el.classList.contains('begin-button')) {
+        $('.begin-button').css({
+          'margin': '0',
+          'width': '100%', 
+          'height': '100%', 
+          'border': '0',
+          'border-radius': '0'
+        });
+        $('.yellow-light, .green-light').css({'background': 'black', 'color': 'black'});
+        $('.traffic-light').removeClass('hidden');
+        setTimeout(() => {
+          $('.begin-button').html('3').css('background', 'rgb(240, 93, 93)');
+        }, 1000)
+        setTimeout(() => {
+          $('.begin-button').css('background', 'white');
+        }, 1500);
+        setTimeout(() => {
+          $('.begin-button').html('2').css('background', 'rgb(240, 93, 93)');
+        }, 2000)
+        setTimeout(() => {
+          $('.begin-button').css('background', 'white');
+        }, 2500);
+        setTimeout(() => {
+          $('.begin-button').html('1').css('background', 'gold');
+          $('.red-light, .green-light').css({'background': 'black', 'color': 'black'});
+          $('.yellow-light').css({'background': 'gold', 'color': 'white'});
+        }, 3000)
+        setTimeout(() => {
+          $('.begin-button').css('background', 'white');
+        }, 3500);
+        setTimeout(() => {
+          $('.begin-button').html('START').css('background', 'green');
+          $('.red-light, .yellow-light').css({'background': 'black', 'color': 'black'});
+          $('.green-light').css({'background': 'green', 'color': 'white'});
+        }, 4000);
+      }
+      console.log(el);
+      if (el.classList.contains('game-center-refresh')) {
+        console.log('listening');
+        if (!$('.traffic-light').hasClass('hidden')) {
+          $('.traffic-light').addClass('hidden');
+          $('.red-light').css({'background': 'red', 'color': 'white'})
+          $('.begin-button').css({
+            'margin': '30px',
+            'width': '30%', 
+            'height': '30%', 
+            'border': '5px solid black',
+            'border-radius': '25px',
+            'background': 'white'
+          }).html('BEGIN');
+        }
       }
 
     });
