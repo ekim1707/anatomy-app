@@ -482,6 +482,28 @@ body {
 .game-center-minimize:hover {
   cursor: pointer;
 }
+.quiz-scoreboard {
+  display: flex;
+  position: absolute;
+  flex-flow: column nowrap;
+  width: 100px;
+  height: 200px;
+  left: 5px;
+  top: 50px;
+  border: 2px solid black;
+  background: black;
+  color: white;
+  z-index: 20;
+}
+.quiz-timer, .quiz-score {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
 .traffic-light {
   display: flex;
   position: absolute;
@@ -613,6 +635,38 @@ body {
   0% { box-shadow: 0 0 -15px rgb(240, 93, 93); }
   50% { box-shadow: 0 0 30px rgb(240, 93, 93); }
   100% { box-shadow: 0 0 -15px rgb(240, 93, 93); }
+}
+.quiz-div {
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+.quiz-question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 25%;
+  font-size: 1em;
+}
+.quiz-answers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 15%;
+  padding: 5px;
+  border: 1px solid black;
+  background: white;
+  font-size: .65em;
+}
+.quiz-answers:hover {
+  cursor: pointer;
+  background: gold;
 }
 
 /* extras */

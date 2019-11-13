@@ -263,7 +263,8 @@
           'border-radius': '0'
         });
         $('.yellow-light, .green-light').css({'background': 'black', 'color': 'black'});
-        $('.traffic-light').removeClass('hidden');
+        $('.quiz-scoreboard, .traffic-light').removeClass('hidden');
+        $('.game-center-title').hide();
         setTimeout(() => {
           $('.begin-button').html('3').css('background', 'rgb(240, 93, 93)');
         }, 1000)
@@ -289,10 +290,23 @@
           $('.red-light, .yellow-light').css({'background': 'black', 'color': 'black'});
           $('.green-light').css({'background': 'green', 'color': 'white'});
         }, 4000);
+        setTimeout(() => {
+          $('.begin-button').hide();
+          $('.quiz-div').removeClass('hidden');
+          let timer = setInterval(() => {
+            const time = $('.time-remaining').html();
+            const newTime = (time - 1);
+            $('.time-remaining').html(newTime);
+            if (newTime === 0) {
+              clearInterval(timer);
+              $('.green-light').css({'background': 'black', 'color': 'black'});
+              $('.red-light').css({'background': 'red', 'color': 'white' }).html('STOP');
+            }
+          }, 1000);
+        }, 5000);
       }
-      console.log(el);
+
       if (el.classList.contains('game-center-refresh')) {
-        console.log('listening');
         if (!$('.traffic-light').hasClass('hidden')) {
           $('.traffic-light').addClass('hidden');
           $('.red-light').css({'background': 'red', 'color': 'white'})
