@@ -220,14 +220,20 @@
           $('.explanations').css('transform', 'translateX(-66.66%)');
         }
       } else if (el.classList.contains('explanations-toggle-left')) {
-        if (!$('.traffic-light').hasClass('hidden')) {
-            $('.traffic-light').addClass('hidden');
+        if (!$('.traffic-light, .quiz-scoreboard').hasClass('hidden')) {
+            $('.traffic-light, .quiz-scoreboard').addClass('hidden');
             $('.red-light').css({'background': 'red', 'color': 'white'})
           setTimeout(() => {
-            $('.begin-button').css({
-              'margin': '30px',
-              'width': '30%', 
-              'height': '30%', 
+            if (!$('.quiz-div').hasClass('hidden')) {
+              $('.quiz-div').css('background', 'white').addClass('hidden');
+            }
+            if (!$('.quiz-times-up').hasClass('hidden')) {
+              $('.quiz-times-up').addClass('hidden');
+            }
+            $('.time-remaining').html('6');
+            $('.begin-button').show().css({
+              'width': '25%', 
+              'height': '25%', 
               'border': '5px solid black',
               'border-radius': '25px',
               'background': 'white'
@@ -291,7 +297,7 @@
           $('.green-light').css({'background': 'green', 'color': 'white'});
         }, 4000);
         setTimeout(() => {
-          $('.begin-button').hide();
+          $('.begin-button').hide().css('background', 'rgb(240, 93, 93)');
           $('.quiz-div').removeClass('hidden');
           let timer = setInterval(() => {
             const time = $('.time-remaining').html();
@@ -301,19 +307,27 @@
               clearInterval(timer);
               $('.green-light').css({'background': 'black', 'color': 'black'});
               $('.red-light').css({'background': 'red', 'color': 'white' }).html('STOP');
+              $('.quiz-div').addClass('hidden');
+              $('.quiz-times-up').removeClass('hidden');
             }
           }, 1000);
         }, 5000);
       }
 
       if (el.classList.contains('game-center-refresh')) {
-        if (!$('.traffic-light').hasClass('hidden')) {
-          $('.traffic-light').addClass('hidden');
-          $('.red-light').css({'background': 'red', 'color': 'white'})
-          $('.begin-button').css({
-            'margin': '30px',
-            'width': '30%', 
-            'height': '30%', 
+        if (!$('.traffic-light, .quiz-scoreboard').hasClass('hidden')) {
+          $('.traffic-light, .quiz-scoreboard').addClass('hidden');
+          $('.red-light').css({'background': 'red', 'color': 'white'});
+          if (!$('.quiz-div').hasClass('hidden')) {
+            $('.quiz-div').css('background', 'white').addClass('hidden');
+          }
+          if (!$('.quiz-times-up').hasClass('hidden')) {
+            $('.quiz-times-up').addClass('hidden');
+          }
+          $('.time-remaining').html('6');
+          $('.begin-button').show().css({
+            'width': '25%', 
+            'height': '25%', 
             'border': '5px solid black',
             'border-radius': '25px',
             'background': 'white'
