@@ -1,4 +1,4 @@
-const articleData = [{
+const articleContent = [{
     name: 'Time Spent in Nature is Good For You',
     resource: 'TheScientist',
     date: 'Oct 2019',
@@ -55,7 +55,7 @@ const articleData = [{
     saved: false
 }]
 
-const videoData = [{
+const videoContent = [{
     name: 'Carnival Scam Science',
     resource: 'Mark Rober',
     date: 'Oct 2017',
@@ -123,7 +123,7 @@ const videoData = [{
     saved: false
 }]
 
-const imageData = [{
+const imageContent = [{
     name: 'Internal Upper Body View',
     resource: 'University of Western Australia',
     date: '',
@@ -174,7 +174,7 @@ const imageData = [{
 }]
 
 module.exports = {
-    articleData,
-    videoData,
-    imageData
+    articleContent,
+    videoContent,
+    imageContent
 };

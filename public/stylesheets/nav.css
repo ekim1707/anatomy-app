@@ -1,0 +1,38 @@
+.navbar {
+    display: block;
+    position: fixed;
+    width: 1%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    z-index: 30;
+}
+.navlinks {
+    position: fixed;
+    width: 10%;
+    height: 40%;
+    left: -10%;
+    top: 30%;
+    margin: 0;
+    padding: 0;
+    border: 4px solid black;
+    border-left: none;
+    background: whitesmoke;
+    list-style: none;
+    transition: left .5s;
+    z-index: 10;
+}
+.navlinks-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    border-bottom: 4px solid black;
+}
+#nav-fourth-link {
+    border-bottom: none;
+}
+.navlinks-link:hover {
+    cursor: pointer;
+}

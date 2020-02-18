@@ -1,0 +1,227 @@
+.game-center {
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 79%;
+    height: 80vh;
+    margin: auto;
+    border: 5px solid black;
+    background: white;
+}
+.game-center-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+}
+.game-center-fullscreen,
+.game-center-minimize {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 5px;
+    top: 5px;
+    border-radius: 5px;
+    background: white;
+    z-index: 20;
+}
+.game-center-fullscreen {
+    border: 2px solid black;
+}
+.game-center-fullscreen:hover,
+.game-center-minimize:hover {
+    cursor: pointer;
+}
+.quiz-scoreboard {
+    display: flex;
+    position: absolute;
+    flex-flow: column nowrap;
+    width: 100px;
+    height: 200px;
+    left: 5px;
+    top: 50px;
+    border: 2px solid black;
+    background: black;
+    color: white;
+    z-index: 20;
+}
+.quiz-timer, .quiz-score {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+  
+.traffic-light {
+    display: flex;
+    position: absolute;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100px;
+    height: 300px;
+    right: 5px;
+    top: 50px;
+    border: 2px solid black;
+    background: black;
+    z-index: 20;
+}
+.lights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: white;
+}
+.red-light {
+    background: red;
+}
+.yellow-light {
+    background: gold;
+}
+.green-light {
+    background: green;
+}
+.explanations-toggle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    padding: 5px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid black;
+    z-index: 20;
+}
+.explanations-toggle:hover {
+    cursor: pointer;
+}
+.explanations-toggle-left {
+    left: 10px;
+}
+.explanations-toggle-right {
+    right: 10px;
+}
+.game-center-title {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    top: 0;
+    font-size: 2em;
+    background: transparent;
+    z-index: 6;
+}
+.game-center-explanations-div {
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, 0.7);
+    overflow: hidden;
+    z-index: 5;
+}
+.explanations {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+.first-explanation,
+.second-explanation,
+.third-explanation {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+    height: 100%;
+    padding: 100px;
+    font-size: 2em;
+}
+.third-explanation {
+    position: relative;
+    padding: 0;
+}
+.game-center-refresh {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 45px;
+    top: 5px;
+    padding: 3px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid black;
+    z-index: 20;
+}
+.game-center-refresh:hover {
+    cursor: pointer;
+}
+.begin-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 25%;
+    border-radius: 25px;
+    background: white;
+    border: 5px solid black;
+    font-size: 2.5em;
+    transition: 1s;
+}
+.begin-button:hover {
+    cursor: pointer;
+    animation: glowing 2s infinite linear;
+    transition: 1s;
+}
+@keyframes glowing {
+    0% { box-shadow: 0 0 -15px rgb(240, 93, 93); }
+    50% { box-shadow: 0 0 30px rgb(240, 93, 93); }
+    100% { box-shadow: 0 0 -15px rgb(240, 93, 93); }
+}
+.quiz-div, .quiz-times-up {
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.quiz-times-up {
+    justify-content: center;
+    background: rgb(240, 93, 93);
+    color: white;
+    font-size: 2em;
+}
+.quiz-question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 25%;
+    font-size: 1em;
+}
+.quiz-answers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 15%;
+    padding: 5px;
+    border: 1px solid black;
+    background: white;
+    font-size: .65em;
+}
+.quiz-answers:hover {
+    cursor: pointer;
+    background: gold;
+}

@@ -1,0 +1,46 @@
+<div class="body-divs first-div">
+    <h2><%= BASIC_REVIEW %></h2>
+    <div class="basic-review-nav">
+        <div class="basic-review-nav-cols">
+        <% TOPIC_LABELS.forEach((LABEL, i) => {
+            if (i === 0) { %>
+                <li class="review-topic-lis selected-text" id="topic-<%= i + 1 %>"><%= LABEL %></li>
+            <% } else if (i < 6) { %>
+                <li class="review-topic-lis" id="topic-<%= i + 1 %>"><%= LABEL %></li>
+            <% }
+        }) %>
+        </div>
+        <div class="basic-review-nav-cols">
+        <% TOPIC_LABELS.forEach((LABEL, i) => {
+            if (i > 5 && i < 12) { %>
+                <li class="review-topic-lis" id="topic-<%= i + 1 %>"><%= LABEL %></li>
+            <% }
+        }) %>
+        </div>
+        <div class="basic-review-nav-cols">
+        <% TOPIC_LABELS.forEach((LABEL, i) => {
+            if (i > 11) { %>
+                <li class="review-topic-lis" id="topic-<%= i + 1 %>"><%= LABEL %></li>
+            <% }
+        }) %>
+        </div>
+    </div>
+    <% include ./topics/topic1 %>
+    <% include ./topics/topic2 %>
+    <% include ./topics/topic3 %>
+    <% include ./topics/topic4 %>
+    <% include ./topics/topic5 %>
+    <% include ./topics/topic6 %>
+    <% include ./topics/topic7 %>
+    <% include ./topics/topic8 %>
+    <% include ./topics/topic9 %>
+    <% include ./topics/topic10 %>
+    <% include ./topics/topic11 %>
+    <% include ./topics/topic12 %>
+    <% include ./topics/topic13 %>
+    <% include ./topics/topic14 %>
+    <% include ./topics/topic15 %>
+    <% include ./topics/topic16 %>
+    <% include ./topics/topic17 %>
+    <% include ./topics/topic18 %>
+</div>

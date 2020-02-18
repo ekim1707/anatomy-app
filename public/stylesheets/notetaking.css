@@ -1,0 +1,23 @@
+.notetaking-div {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.notepad {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    border: 1px solid black;
+    background: white;
+}
+.clipboard {
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    border: 1px solid black;
+    border-left: none;
+    background: lightgray;
+}

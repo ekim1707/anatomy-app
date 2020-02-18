@@ -1,0 +1,75 @@
+.body-divs {
+    width: 100%;
+}
+.basic-review-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 200px;
+    border: 8px solid #ff9800;
+    background: rgb(255, 255, 255, .5);
+}
+.basic-review-nav-cols {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 33.33%;
+    height: 100%;
+}
+.review-topic-lis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 16.67%;
+    font-weight: bolder;
+    transition: .7s;
+}
+.review-topic-lis:hover {
+    cursor: pointer;
+    color: #ff9800;
+    transition: .7s;
+}
+.review-topic-bodies {
+    width: 100%;
+    text-align: left;
+    padding: 0 20px 0 20px;
+}
+.review-topic-bodies > h3 {
+    width: 100%;
+    text-align: center;
+}
+.review-topic-bodies > h4 {
+    width: 100%;
+    text-align: center;
+}
+.keywords-title {
+    color: red;
+}
+.keywords-divs {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    background: whitesmoke;
+    color: red;
+}
+.keywords-divs > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 25%;
+    list-style: none;
+}
+.homeostatis-image {
+    display: flex;
+    border: 2px solid lightgray;
+    margin-left: auto;
+    margin-right: auto;
+}

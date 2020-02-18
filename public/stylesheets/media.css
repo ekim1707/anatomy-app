@@ -1,0 +1,110 @@
+.media-player {
+    display: flex;
+    position: absolute;
+    width: 78%;
+    height: 78%;
+    left: 11%;
+    background: white;
+}
+.fullscreen-toggles {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: white;
+}
+.fullscreen-toggles:hover {
+    cursor: pointer;
+}
+#maximize {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#minimize {
+    border-radius: 5px;
+}
+.iframe-toggles {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -60px;
+    left: 11%;
+    background: white;
+    border: 2px solid black;
+    border-radius: 25%;
+    padding: 10px;
+}
+.iframe-toggles:hover {
+    cursor: pointer;
+}
+.media-videos {
+    margin-left: 60px;
+}
+.media-images {
+    margin-left: 120px;
+}
+.media-player-col {
+    width: 10%;
+    height: 100%;
+    background: whitesmoke;
+    border: 2px solid black;
+}
+.col-headings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background: gray;
+    color: white;
+    border-bottom: 2px solid black;
+}
+.col-lists {
+    width: 100%;
+    height: 90%;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+.col-lis {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 100%;
+    height: 43%;
+    overflow: auto;
+    border-top: 2px solid black;
+}
+.col-lis:hover {
+    cursor: pointer;
+    background: dodgerblue;
+    color: white;
+}
+.col-lis-name {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    padding: 5px;
+    overflow: hidden;
+}
+.col-lis-info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    padding: 2px;
+}
+  
+.media-player-iframe {
+    width: 81%;
+    height: 100%;
+    text-align: center;
+    background: lightgray;
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+    object-fit: contain;
+}

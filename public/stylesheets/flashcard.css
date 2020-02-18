@@ -1,0 +1,162 @@
+.flash-card-center {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 80vh;
+}
+.flash-card-practice-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    background: rgb(211, 211, 211, 0.5);
+    border: 5px solid #ff9800;
+}
+.practice-container-categories {
+    display: flex;
+    position: absolute;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    top: 0;
+}
+.practice-container-category-label {
+    list-style: none;
+    padding: 5px 0 5px 5px;
+}
+.practice-container-category-lis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+    background: white;
+    border-radius: 50%;
+}
+.practice-container-category-lis.selected {
+    background: #ff9800;
+    color: white;
+}
+.practice-container-category-lis:hover {
+    cursor: pointer;
+}
+.flash-card-maker-minimize, 
+.flash-card-maker-maximize,
+.flash-card-practice-container-fullscreen,
+.flash-card-practice-container-minimize {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.flash-card-maker-minimize,
+.flash-card-maker-maximize {
+    right: 10px;
+    top: 60px;
+}
+.flash-card-practice-container-fullscreen, 
+.flash-card-practice-container-minimize {
+    right: 10px;
+    top: 100px;
+    background: white;
+    border-radius: 5px;
+}
+.flash-card-practice-container-fullscreen {
+    border: 2px solid black;
+}
+.flash-card-maker-minimize:hover, 
+.flash-card-maker-maximize:hover, 
+.flash-card-practice-container-fullscreen:hover, 
+.flash-card-practice-container-minimize:hover {
+    cursor: pointer;
+}
+.flash-card {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    transform-style: preserve-3d;
+    border: 1px solid black;
+    background: transparent;
+    transition: 1s;
+}
+.flash-card:hover {
+    cursor: pointer;
+}
+.flash-card-back, .flash-card-front {
+    display: flex;
+    position: absolute;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    backface-visibility: hidden;
+}
+.flash-card-back {
+    transform: rotateY(180deg);
+}
+.flash-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    padding: 5px;
+}
+.flash-card-answer, .flash-card-question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    padding: 5px;
+    font-size: 1.5em;
+}
+.flash-card-answer, .flash-card-answer-explanation {
+    color: red;
+}
+.flash-card-answer-explanation, .flash-card-hint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    padding: 5px;
+}
+.flash-card-maker-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    border: 5px solid #ff9800;
+    border-left: none;
+    background: rgb(255, 255, 255, .5);
+}
+.flash-card-maker-form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+    background: white;
+}
+.form-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+  
+.third-div {
+    padding-bottom: 40px;
+}

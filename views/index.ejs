@@ -1,20 +1,18 @@
 <% include head %>
-  <body>
-    <button class="button-materialize-style hoverable">
-      <span class="button-white-dot"></span>
-    </button>
-    <% include navbar %>
-    <div class="background-image-floating"></div>
-    <div class="flex-container">
-      <h1>Welcome to Anatomy</h1>
-      <% include basics %>
-      <!-- <div class="body-divs second-div hidden">
-        Coming soon
-      </div> -->
-      <% include media %>
-      <% include studytools %>
-      <% include notetaking %>
-    </div>
+<body>
+  <button class="button-materialize-style hoverable"><span class="button-white-dot"></span></button>
+  <% include ./nav/index %>
+  <div class="background-image-floating"></div>
+  <div class="flex-container">
+    <h1>Welcome to Anatomy</h1>
+    <% include ./basics/index %>
+    <!-- <div class="body-divs second-div hidden">
+      Coming soon
+    </div> -->
+    <% include ./media/index %>
+    <% include ./studytools/index %>
+    <% include ./notetaking/index %>
+  </div>
   <script>
     $(".button-materialize-style, .navbar").mouseover(() => {
       $(".navlinks").css("left", "0");
@@ -339,5 +337,5 @@
     });
 
   </script>
-  </body>
+</body>
 </html>
